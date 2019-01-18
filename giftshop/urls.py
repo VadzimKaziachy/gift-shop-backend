@@ -13,7 +13,7 @@ from graphene_django.views import GraphQLView
 urlpatterns = [
     url(r'^django-admin/', admin.site.urls),
 
-    url(r'', include(wagtailadmin_urls)),
+    url(r'^admin/', include(wagtailadmin_urls)),
     url(r'^documents/', include(wagtaildocs_urls)),
     url(r'^graphql', csrf_exempt(GraphQLView.as_view(graphiql=True))),
 

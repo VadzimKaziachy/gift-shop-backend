@@ -61,7 +61,7 @@ MIDDLEWARE = [
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = env.list('CORS_ORIGIN_WHITELIST')
+CORS_ORIGIN_WHITELIST = env('CORS_ORIGIN_WHITELIST')
 
 GRAPHENE = {
     'SCHEMA': 'giftshop.schema.schema'
