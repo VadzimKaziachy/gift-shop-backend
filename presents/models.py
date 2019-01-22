@@ -8,14 +8,7 @@ from wagtail.admin.edit_handlers import FieldPanel, MultiFieldPanel
 class GiftPage(Page):
     short_description = TextField(blank=False, help_text='Gift summary')
     full_description = TextField(blank=False, help_text='Complete gift information')
-    icon_front = models.ForeignKey(
-        'wagtailimages.Image',
-        null=True,
-        blank=False,
-        on_delete=models.SET_NULL,
-        related_name='+'
-    )
-    icon_back = models.ForeignKey(
+    icon = models.ForeignKey(
         'wagtailimages.Image',
         null=True,
         blank=False,
@@ -27,8 +20,7 @@ class GiftPage(Page):
         MultiFieldPanel(Page.content_panels + [
             FieldPanel('short_description'),
             FieldPanel('full_description'),
-            ImageChooserPanel('icon_front'),
-            ImageChooserPanel('icon_back')
+            ImageChooserPanel('icon')
         ])
     ]
 
