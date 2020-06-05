@@ -2,7 +2,7 @@ aniso8601==3.0.2
 beautifulsoup4==4.6.0
 certifi==2018.11.29
 chardet==3.0.4
-Django==2.1.5
+Django==2.2.13
 django-cors==0.1
 django-cors-headers==2.4.0
 django-environ==0.4.5
